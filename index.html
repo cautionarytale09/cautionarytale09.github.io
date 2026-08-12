@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my amazing website</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
-  </head>
-  <body>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="body">
+        <h1>click the screen for a random fact</h1>
+        <h3 id="fact"></h3>
+    </body>
+    <script src="script.js"></script>
+    <script src="facts.js"></script>
+    <script>
+        function click(){
+            play()
+            cyclefact()
+        };
 
-    <script src="./script.js"></script>
-
-    <div id="replace">
-      <h1>my amazing website</h1>
-      <p>you should type "password" in the password box trust</p>
-      <input type="text" id="password-box" class="password-box"></input>
-      <button onclick="unlock(document.getElementById('password-box').value)">Submit</button>
-    </div>
-  </body>
+        document.getElementById("body").addEventListener("click", function(){
+            click()
+        });
+    </script>
+    
 </html>
